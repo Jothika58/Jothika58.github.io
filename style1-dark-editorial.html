@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jothika S — AI Researcher & Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--border:#1e1e2e;--text:#e4e4ed;--muted:#8888a0;--accent:#64d8a0;--accent2:#3ea8ff;--serif:'DM Serif Display',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--mono:'JetBrains Mono',monospace}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent2)}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}section{padding:5rem 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);background:rgba(10,10,15,.7);border-bottom:1px solid var(--border);padding:1rem 0}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--serif);font-size:1.25rem;color:var(--text)}.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{color:var(--muted);font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;transition:color .2s}.nav-links a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:5rem}
+.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(100,216,160,.08),transparent 70%);top:-100px;right:-200px;pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-tag{display:inline-block;font-family:var(--mono);font-size:.75rem;color:var(--accent);border:1px solid rgba(100,216,160,.3);padding:.35rem .85rem;border-radius:999px;margin-bottom:1.5rem;letter-spacing:.04em}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,4.5rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:1.25rem}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:520px;margin-bottom:2rem;line-height:1.7}
+.hero-links{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.5rem;border-radius:8px;font-size:.85rem;font-weight:600;transition:all .25s}
+.btn-primary{background:var(--accent);color:var(--bg)}.btn-primary:hover{background:#7ae6b4;color:var(--bg)}
+.btn-outline{border:1px solid var(--border);color:var(--text)}.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-photo{position:relative}.hero-photo img{width:100%;border-radius:20px;object-fit:cover;aspect-ratio:3/4;filter:grayscale(.15)}
+.hero-photo::after{content:'';position:absolute;inset:-8px;border-radius:24px;border:1px solid rgba(100,216,160,.15);pointer-events:none}
+.hero-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.stat-num{font-family:var(--serif);font-size:2rem;color:var(--accent);line-height:1}.stat-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.25rem}
+.section-tag{font-family:var(--mono);font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);letter-spacing:-.02em;margin-bottom:1rem}
+.section-desc{color:var(--muted);max-width:600px;margin-bottom:3rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about-text p{color:var(--muted);margin-bottom:1rem;line-height:1.8}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.skill-chip{font-family:var(--mono);font-size:.72rem;padding:.4rem .8rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.timeline{position:relative;padding-left:2rem}.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border)}
+.timeline-item{position:relative;padding-bottom:3rem}.timeline-item::before{content:'';position:absolute;left:-2rem;top:.4rem;width:9px;height:9px;border-radius:50%;background:var(--accent);transform:translateX(-4px)}
+.timeline-role{font-size:1.1rem;font-weight:600}.timeline-company{color:var(--accent);font-size:.9rem}
+.timeline-date{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin:.25rem 0 .5rem}.timeline-desc{color:var(--muted);font-size:.9rem;line-height:1.7}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+.project-card:hover{border-color:rgba(100,216,160,.3);transform:translateY(-4px)}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}.project-card:hover::before{opacity:1}
+.project-type{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:.75rem}
+.project-title{font-family:var(--serif);font-size:1.3rem;margin-bottom:.75rem}.project-desc{color:var(--muted);font-size:.85rem;line-height:1.7;margin-bottom:1rem}
+.project-tech{display:flex;flex-wrap:wrap;gap:.4rem}.project-tech span{font-family:var(--mono);font-size:.65rem;padding:.25rem .6rem;border-radius:4px;background:rgba(100,216,160,.08);color:var(--accent);border:1px solid rgba(100,216,160,.12)}
+.pub-list{display:flex;flex-direction:column;gap:1.25rem}
+.pub-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.75rem;transition:border-color .3s}.pub-item:hover{border-color:rgba(62,168,255,.3)}
+.pub-year{font-family:var(--mono);font-size:.7rem;color:var(--accent2);margin-bottom:.5rem}.pub-title{font-size:1rem;font-weight:600;margin-bottom:.4rem;line-height:1.5}
+.pub-venue{color:var(--muted);font-size:.82rem}.pub-doi{font-family:var(--mono);font-size:.72rem;color:var(--accent);margin-top:.4rem;display:inline-block}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.75rem}
+.edu-degree{font-weight:600;font-size:1rem;margin-bottom:.25rem}.edu-school{color:var(--accent);font-size:.9rem}.edu-meta{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:.5rem}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cert-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;font-size:.85rem;transition:border-color .3s}.cert-item:hover{border-color:rgba(100,216,160,.25)}
+.cert-name{font-weight:600;font-size:.82rem;margin-bottom:.25rem}.cert-org{color:var(--muted);font-size:.72rem}
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.award-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;font-size:.85rem;transition:border-color .3s}.award-item:hover{border-color:rgba(100,216,160,.25)}
+.award-icon{font-size:1.25rem;margin-bottom:.5rem}.award-name{font-weight:600;margin-bottom:.25rem;font-size:.85rem}.award-org{color:var(--muted);font-size:.75rem}
+.contact-inner{text-align:center;max-width:600px;margin:0 auto}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.contact-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;border-radius:999px;border:1px solid var(--border);font-size:.85rem;color:var(--text);transition:all .25s}.contact-pill:hover{border-color:var(--accent);color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center}footer p{font-size:.78rem;color:var(--muted)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner>*{opacity:0;animation:fadeUp .8s ease forwards}.hero-inner>*:nth-child(2){animation-delay:.3s}
+@media(max-width:768px){
+.hero-inner{grid-template-columns:1fr;text-align:center}.hero-photo{max-width:260px;margin:0 auto;order:-1}
+.hero-sub{margin-left:auto;margin-right:auto}.hero-links,.hero-stats{justify-content:center}
+.about-grid,.edu-grid,.projects-grid{grid-template-columns:1fr}.awards-grid,.cert-grid{grid-template-columns:1fr 1fr}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--border);padding:1.5rem 2rem;gap:1rem}
+.nav-links.active{display:flex}.nav-toggle{display:block}
+}
+</style>
+</head>
+<body>
+<nav><div class="container"><a href="#" class="nav-logo">J<span>.</span>S</a><button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">☰</button><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#publications">Research</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<section class="hero" id="home"><div class="container"><div class="hero-inner"><div>
+<span class="hero-tag">AI Researcher & Data Scientist</span>
+<h1>Jothika <em>S</em></h1>
+<p class="hero-sub">M.Tech AI & Data Science researcher building deep learning solutions for medical imaging, cybersecurity, and NLP. Passionate about turning complex data into real-world impact.</p>
+<div class="hero-links">
+<a href="https://github.com/Jothika58" target="_blank" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+<a href="https://in.linkedin.com/in/jothikas14" target="_blank" class="btn btn-outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+<a href="mailto:jothika1407@gmail.com" class="btn btn-outline">✉ Email</a>
+</div>
+<div class="hero-stats">
+<div><div class="stat-num">6+</div><div class="stat-label">Publications</div></div>
+<div><div class="stat-num">1</div><div class="stat-label">Patent</div></div>
+<div><div class="stat-num">99.09%</div><div class="stat-label">Best Accuracy</div></div>
+</div>
+</div>
+<div class="hero-photo"><img src="photo.jpg" alt="Jothika S" onerror="this.style.background='linear-gradient(135deg,#1e1e2e,#2a2a3e)';this.style.display='block'"></div>
+</div></div></section>
+
+<!-- ABOUT -->
+<section id="about"><div class="container">
+<div class="section-tag">// About</div>
+<div class="section-title">Who I Am</div>
+<div class="about-grid"><div class="about-text">
+<p>I am currently pursuing my M.Tech in Artificial Intelligence & Data Science at SASTRA Deemed University, with a focus on deep learning, computer vision, and natural language processing. My research interests lie in building classification systems for medical imaging and cybersecurity applications, and I have had the opportunity to publish my work through Scopus-indexed journals, IEEE conferences, an IGI Global book chapter, and an Indian patent.</p>
+<p>My recent projects include a brain tumor classification system using InceptionResNetV2 (98.25% accuracy on 7,023 MRI images) and a calibrated multi-feature SVM framework for spam detection (99.09% on UCI SMS Spam). I enjoy working on end-to-end pipelines — from data preprocessing and feature engineering through model evaluation and interpretation.</p>
+<p>Outside of research, I have been involved in student communities as IEEE Web Master, Google DSC Data Science Head, and GFG Vice-Chairperson, and have conducted workshops on machine learning and deep learning. I am looking for opportunities in AI/ML engineering or applied data science where I can continue learning while contributing to meaningful, real-world projects.</p>
+</div><div>
+<div class="section-tag" style="margin-top:0">Technical Skills</div>
+<div class="skills-wrap">
+<span class="skill-chip">Python</span><span class="skill-chip">SQL</span><span class="skill-chip">TensorFlow</span><span class="skill-chip">Keras</span><span class="skill-chip">PyTorch</span><span class="skill-chip">Scikit-learn</span><span class="skill-chip">Power BI</span><span class="skill-chip">OpenCV</span><span class="skill-chip">NumPy</span><span class="skill-chip">Pandas</span><span class="skill-chip">NLP</span><span class="skill-chip">CNN</span><span class="skill-chip">Transfer Learning</span><span class="skill-chip">SVM</span><span class="skill-chip">AWS (Basic)</span><span class="skill-chip">HTML/CSS/JS</span><span class="skill-chip">PHP</span><span class="skill-chip">MySQL</span><span class="skill-chip">Firebase</span><span class="skill-chip">Canva</span><span class="skill-chip">Figma</span><span class="skill-chip">Java (Android)</span><span class="skill-chip">Git</span>
+</div>
+<div class="section-tag" style="margin-top:2rem">Languages</div>
+<div class="skills-wrap">
+<span class="skill-chip">English — Professional Working</span>
+<span class="skill-chip">Tamil — Full Professional</span>
+<span class="skill-chip">Telugu — Native</span>
+</div>
+</div></div>
+</div></section>
+
+<!-- EDUCATION -->
+<section id="education" style="padding-top:0"><div class="container">
+<div class="section-tag">// Education</div><div class="section-title">Academic Background</div>
+<div class="edu-grid">
+<div class="edu-card"><div class="edu-degree">M.Tech — AI & Data Science</div><div class="edu-school">SASTRA Deemed University</div><div class="edu-meta">2024 – Pursuing &nbsp;|&nbsp; CGPA: 8.44</div></div>
+<div class="edu-card"><div class="edu-degree">B.Tech — Information Technology</div><div class="edu-school">Sri Sairam Engineering College</div><div class="edu-meta">2020 – 2024 &nbsp;|&nbsp; CGPA: 8.64</div></div>
+</div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section id="experience"><div class="container">
+<div class="section-tag">// Experience</div><div class="section-title">Internships</div>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-role">Research Analyst</div><div class="timeline-company">Velozity Global Solutions</div><div class="timeline-date">Jan 2022 – Jun 2022</div><div class="timeline-desc">Conducted deep learning experiments for model evaluation. Built Power BI dashboards. Assisted in research writing and organizing findings for publication.</div></div>
+<div class="timeline-item"><div class="timeline-role">Data Science Intern</div><div class="timeline-company">LetsGrowMore</div><div class="timeline-date">Aug 2021 – Sep 2021</div><div class="timeline-desc">Applied supervised learning on domain data for predictive modeling. Collaborated on projects to enhance ML workflows and evaluation.</div></div>
+<div class="timeline-item"><div class="timeline-role">App Developer</div><div class="timeline-company">Genik Research Institute</div><div class="timeline-date">Oct 2021 – Mar 2022</div><div class="timeline-desc">Designed, built, and maintained an AI-based application using Java for Android and Python for AI modules.</div></div>
+<div class="timeline-item"><div class="timeline-role">Full-Stack Web Developer Intern</div><div class="timeline-company">ShapeAI</div><div class="timeline-date">Jul 2021 – Oct 2021</div><div class="timeline-desc">Built and maintained websites using HTML, CSS, JS (front-end), PHP (back-end), and MySQL.</div></div>
+</div>
+</div></section>
+
+<!-- PROJECTS -->
+<section id="projects"><div class="container">
+<div class="section-tag">// Projects</div><div class="section-title">Featured Work</div>
+<div class="projects-grid">
+<div class="project-card"><div class="project-type">Deep Learning · Medical Imaging</div><div class="project-title">Multiclass Brain Tumor Classification</div><div class="project-desc">Enhanced InceptionResNetV2 model classifying brain tumors from MRI into glioma, meningioma, pituitary tumor, and no tumor — 98.25% test accuracy on 7,023 images. Published as IGI Global book chapter (2026).</div><div class="project-tech"><span>TensorFlow</span><span>Keras</span><span>InceptionResNetV2</span><span>Transfer Learning</span></div></div>
+<div class="project-card"><div class="project-type">ML · Cybersecurity</div><div class="project-title">FusiCal-SVM — Spam Message Classification</div><div class="project-desc">Calibrated multi-feature fusion framework combining TF-IDF textual features with statistical and structural numeric features. Achieved 99.09% on UCI SMS Spam and 98.83% on Ling-Spam using Platt-scaled SVM. Published in IEEE Xplore.</div><div class="project-tech"><span>SVM</span><span>TF-IDF</span><span>Platt Scaling</span><span>Scikit-learn</span><span>Text Mining</span></div></div>
+<div class="project-card"><div class="project-type">NLP · Legal Tech</div><div class="project-title">TextRank Summarization with IPC Feature Extraction</div><div class="project-desc">NLP system to automatically summarize legal case files and extract key IPC (Indian Penal Code) features using rule-based methods combined with TextRank.</div><div class="project-tech"><span>Python</span><span>NLP</span><span>TextRank</span><span>Rule-Based Systems</span></div></div>
+<div class="project-card"><div class="project-type">Computer Vision · Patent</div><div class="project-title">MediPrompt — Iron Deficiency Detection</div><div class="project-desc">CNN-based tongue diagnosis application to determine iron deficiency stage. Filed as Indian patent (IN 202241076692, published Jan 2023).</div><div class="project-tech"><span>CNN</span><span>Image Classification</span><span>Medical AI</span><span>Patent</span></div></div>
+<div class="project-card"><div class="project-type">Deep Learning · Sign Language</div><div class="project-title">Mood Mission — Mental Health Tracker</div><div class="project-desc">Mental health monitoring application for individuals with speech disabilities using sign language recognition, with online bot counseling and caretaker alerts.</div><div class="project-tech"><span>Deep Learning</span><span>Sign Language</span><span>Chatbot</span><span>Firebase</span></div></div>
+<div class="project-card"><div class="project-type">Deep Learning · NDT</div><div class="project-title">Crack Detection on Metal Surfaces</div><div class="project-desc">Deep learning model for automated crack detection on metal surfaces for industrial non-destructive testing. Published at IEEE ICCEBS 2023.</div><div class="project-tech"><span>CNN</span><span>Image Classification</span><span>Industrial AI</span><span>IEEE</span></div></div>
+</div>
+</div></section>
+
+<!-- PUBLICATIONS -->
+<section id="publications"><div class="container">
+<div class="section-tag">// Research & Publications</div><div class="section-title">Published Work</div>
+<div class="pub-list">
+<div class="pub-item"><div class="pub-year">2026 · Book Chapter</div><div class="pub-title">Multiclass Brain Tumor Classification From MRI Scans Using Enhanced Inception Network With Residual Connections</div><div class="pub-venue">N. Sasikaladevi, <strong>S. Jothika</strong>, A. J. Dhivyabharathi — <em>Advancing Equity in Global Healthcare Systems</em>, IGI Global</div><a href="https://doi.org/10.4018/979-8-3373-1330-6.ch011" target="_blank" class="pub-doi">DOI: 10.4018/979-8-3373-1330-6.ch011</a></div>
+<div class="pub-item"><div class="pub-year">2025 · IEEE Conference</div><div class="pub-title">FusiCal-SVM: A Calibrated Multi-Feature Fusion Model for Spam Message Classification</div><div class="pub-venue"><strong>Jothika S</strong> — Dept. of AI & Data Science, SASTRA Deemed University</div><a href="https://ieeexplore.ieee.org/document/11401578" target="_blank" class="pub-doi">IEEE Xplore: 11401578</a></div>
+<div class="pub-item"><div class="pub-year">2023 · Patent</div><div class="pub-title">MediPrompt — An Application for the Timely Detection of Iron Deficiency</div><div class="pub-venue">P. Soma, <strong>S. Jothika</strong>, S. Dharshini — IN Patent No. 202241076692</div><div class="pub-doi">Published: Jan 06, 2023</div></div>
+<div class="pub-item"><div class="pub-year">2023 · IEEE Conference</div><div class="pub-title">Crack Detection for Metal Surfaces Using Deep Learning Model</div><div class="pub-venue">S. Prathibha, <strong>Jothika S</strong>, K. Krishnamurthy, Ananya — IEEE ICCEBS 2023</div><a href="https://doi.org/10.1109/ICCEBS58601.2023.10449252" target="_blank" class="pub-doi">DOI: 10.1109/ICCEBS58601.2023.10449252</a></div>
+<div class="pub-item"><div class="pub-year">2023 · Journal</div><div class="pub-title">Mental Health Tracker for Dumb using Sign Language</div><div class="pub-venue">D. S. Prathibha, <strong>S. Jothika</strong>, S. Dharshini — Journal of Current Research in Engineering and Science, 6(2)</div></div>
+<div class="pub-item"><div class="pub-year">2022 · Journal (Scopus-Indexed)</div><div class="pub-title">Tongue Diagnosis using CNN for Disease Prediction</div><div class="pub-venue">P. Soma, K. R. Saradha, <strong>S. Jothika</strong>, S. Dharshini — IJEER, 10(4), 817–821</div><a href="https://doi.org/10.37391/IJEER.100409" target="_blank" class="pub-doi">DOI: 10.37391/IJEER.100409</a></div>
+</div>
+</div></section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="padding-top:0"><div class="container">
+<div class="section-tag">// Certifications</div><div class="section-title">Professional Development</div>
+<div class="cert-grid">
+<div class="cert-item"><div class="cert-name">Introduction to Machine Learning</div><div class="cert-org">IBM Academy</div></div>
+<div class="cert-item"><div class="cert-name">Master Data Science</div><div class="cert-org">Great Learning Academy</div></div>
+<div class="cert-item"><div class="cert-name">Cyber Security Fundamentals</div><div class="cert-org">Cisco Academy</div></div>
+<div class="cert-item"><div class="cert-name">Java Fundamentals</div><div class="cert-org">Oracle Academy</div></div>
+<div class="cert-item"><div class="cert-name">MongoDB</div><div class="cert-org">MongoDB University</div></div>
+<div class="cert-item"><div class="cert-name">Arduino, R, PHP & MySQL</div><div class="cert-org">IITM Bombay Spoken Tutorial</div></div>
+<div class="cert-item"><div class="cert-name">AWS Solution Architect Associate</div><div class="cert-org">Pursuing</div></div>
+<div class="cert-item"><div class="cert-name">Cisco CCNA</div><div class="cert-org">Pursuing</div></div>
+<div class="cert-item"><div class="cert-name">100+ Badges on Microsoft Learn</div><div class="cert-org">Microsoft</div></div>
+</div>
+</div></section>
+
+<!-- AWARDS -->
+<section id="awards" style="padding-top:0"><div class="container">
+<div class="section-tag">// Recognition</div><div class="section-title">Awards & Achievements</div>
+<div class="awards-grid">
+<div class="award-item"><div class="award-icon">🥇</div><div class="award-name">1st Place — Code Debugging</div><div class="award-org">National Level, Panimalar IT</div></div>
+<div class="award-item"><div class="award-icon">🥉</div><div class="award-name">3rd Place — 404 Not Found</div><div class="award-org">Sri Sairam Eng. College</div></div>
+<div class="award-item"><div class="award-icon">🏆</div><div class="award-name">Best Novelty Award</div><div class="award-org">Web Dev Contest, SSEC</div></div>
+<div class="award-item"><div class="award-icon">💻</div><div class="award-name">Tech Savvy Award</div><div class="award-org">SEC IEEE CS SBC</div></div>
+<div class="award-item"><div class="award-icon">🚀</div><div class="award-name">Top Finalist — Buoyanci Innovation</div><div class="award-org">Innovation Challenge '22</div></div>
+<div class="award-item"><div class="award-icon">⭐</div><div class="award-name">Top-Finalist — Cognizant ProDIGI '22</div><div class="award-org">Cognizant</div></div>
+<div class="award-item"><div class="award-icon">🏅</div><div class="award-name">Top 200 — IEEE Xtreme 2021</div><div class="award-org">International 24hr Hackathon</div></div>
+<div class="award-item"><div class="award-icon">📜</div><div class="award-name">30+ Certifications — Udemy</div><div class="award-org">Udemy</div></div>
+<div class="award-item"><div class="award-icon">🎓</div><div class="award-name">5+ CISCO Courses</div><div class="award-org">Learnathon 2022–23</div></div>
+</div>
+</div></section>
+
+<!-- VOLUNTEERING -->
+<section id="volunteering" style="padding-top:0"><div class="container">
+<div class="section-tag">// Leadership</div><div class="section-title">Volunteering & Community</div>
+<div class="skills-wrap" style="gap:.75rem">
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🌐 Web Master — IEEE CS, SSEC</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">📊 Data Science Head — Google DSC, SSEC</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🤝 Vice-Chairperson — GFG Student Branch</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">📢 IEEE Brand Ambassador 2021</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🎤 Student Representative — Sairam TAP Cell</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🏕 NSS Volunteer</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🎯 Workshop Trainer — ML, Python, DL</span>
+<span class="skill-chip" style="padding:.6rem 1rem;font-family:var(--sans);font-size:.82rem">🎙 Event Anchor — National & International</span>
+</div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="container"><div class="contact-inner">
+<div class="section-tag">// Get in Touch</div><div class="section-title">Let's Connect</div>
+<p class="section-desc" style="margin-left:auto;margin-right:auto">Open to data science, AI/ML research, and engineering opportunities. Let's build something impactful together.</p>
+<div class="contact-links">
+<a href="mailto:jothika1407@gmail.com" class="contact-pill">✉ jothika1407@gmail.com</a>
+<a href="https://github.com/Jothika58" target="_blank" class="contact-pill">GitHub</a>
+<a href="https://in.linkedin.com/in/jothikas14" target="_blank" class="contact-pill">LinkedIn</a>
+<a href="https://orcid.org/0009-0009-3951-7334" target="_blank" class="contact-pill">🆔 ORCID</a>
+<a href="https://scholar.google.com/citations?user=0yO8gRAAAAJ" target="_blank" class="contact-pill">📚 Google Scholar</a>
+</div>
+</div></div></section>
+
+<footer><div class="container"><p>© 2026 Jothika S · Mayiladuthurai, India</p></div></footer>
+</body>
+</html>
